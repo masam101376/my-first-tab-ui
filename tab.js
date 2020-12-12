@@ -21,7 +21,16 @@
         // クリックされたnavとそのdataを取得
         const $this = e.target;
         const targetVal = $this.dataset.nav;
+        
         console.log($tab.querySelectorAll('[data-content="' + targetVal + '"]')[0]);
+
+        // 対象外のnav, contentをすべて一旦リセットする
+        let index = 0;
+        while(index < $nav.length){
+            $content[index].style.display = 'none';
+            $nav[index].classList.remove('is-active');
+            index++;
+        }
 
         // 対称のコンテンツアクティブ化する
         $tab.querySelectorAll('[data-content="' + targetVal + '"]')[0].style.display = 'block';
