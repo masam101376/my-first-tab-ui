@@ -7,20 +7,27 @@
     <link rel="stylesheet" href="tab.css">
 </head>
 <body>
-    <div class="tab-nav">
-        <a href="" class="tab-nav-item">Tab-0</a>
-        <a href="" class="tab-nav-item">Tab-1</a>
-        <a href="" class="tab-nav-item">Tab-2</a>
-    </div>
-    <div class="tab-contents">
-        <div class="tab-contents-item">
-            tab-0
+    <!-- js-xxx: cssを当てるclass, idとjsを当てるclass, idは分けてあげないとごっちゃになるので、jsを当てるときは
+    * jsにはid, cssにはclassを用いる
+    * jsにはプレフィックス "js-" をつける
+    -->
+    <div class="tab" id="js-tab">
+        <div class="tab-nav">
+            <!-- DOM操作したいけどidとかclassとか使いたくないなってときはdata- 属性を使うと色々好き勝手出来て便利 -->
+            <a href="" class="tab-nav-item" data-nav="0">Tab-0</a>
+            <a href="" class="tab-nav-item" data-nav="1">Tab-1</a>
+            <a href="" class="tab-nav-item" data-nav="2">Tab-2</a>
         </div>
-        <div class="tab-contents-item">
-            tab-1
-        </div>
-        <div class="tab-contents-item">
-            tab-2
+        <div class="tab-contents">
+            <div class="tab-contents-item" data-content="0">
+                tab-0
+            </div>
+            <div class="tab-contents-item" data-content="0">
+                tab-1
+            </div>
+            <div class="tab-contents-item" data-content="0">
+                tab-2
+            </div>
         </div>
     </div>
 
