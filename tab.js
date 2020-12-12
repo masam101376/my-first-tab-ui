@@ -18,7 +18,13 @@
         // 前提: clickHandlerはクリックを検知するためのもの
         // preventDefault();: もともと設置されていたクリックイベントに対するリアクションを無効化するためのもの。
 
-        console.log('clicked!');
+        // クリックされたnavとそのdataを取得
+        const $this = e.target;
+        const targetVal = $this.dataset.nav;
+        console.log($tab.querySelectorAll('[data-content="' + targetVal + '"]')[0]);
+
+        // 対称のコンテンツアクティブ化する
+        $tab.querySelectorAll('[data-content="' + targetVal + '"]')[0].style.display = 'block';
     };
 
     let index = 0;
