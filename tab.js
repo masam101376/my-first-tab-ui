@@ -25,6 +25,7 @@
 
         // 対称のコンテンツアクティブ化する
         $tab.querySelectorAll('[data-content="' + targetVal + '"]')[0].style.display = 'block';
+        $nav[targetVal].classList.add('is-active');
     };
 
     let index = 0;
