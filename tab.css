@@ -12,6 +12,10 @@
     border-radius: 5px 5px 0 0;
     margin-right: 2px;
 }
+.tab-nav-item.is-active{
+    background: #000;
+    color: #fff;
+}
 .tab-contents {
     border: 1px solid #ccc;
     padding: 20px;
